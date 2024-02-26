@@ -1,0 +1,18 @@
+extends layout 
+
+block content
+    script(src="/scripts/form-validation/index.js" type="module")
+    .d-flex.justify-content-center.align-items-center.h-100
+        form#form.bg-body-tertiary.p-4.rounded.shadow
+            h3.text-center Sign up
+            .form-group.mb-3
+                label(for="username") Username
+                input.form-control.username(type="text" id="username" name="username" placeholder="Enter your username" required)
+            .form-group.mb-3
+                label(for="email") Email address
+                input.form-control.email(type="email" id="email" name="email" placeholder="Enter your email" required)
+            .form-group.mb-3
+                label(for="password") Password
+                input.form-control.password(type="password" id="password" name="password" placeholder="Enter your password" required)
+            button.btn.btn-primary.px-4(type="submit") Sign Up
+
