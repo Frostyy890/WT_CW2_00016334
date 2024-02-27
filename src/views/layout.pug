@@ -8,4 +8,19 @@ html
     body
         script(src="/js/bootstrap.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js")
+        nav.navbar.navbar-expand-lg.bg-body-tertiary
+            .container-fluid
+                button(type="button", data-bs-toggle="collapse", data-bs-target="#navbarTogglerDemo01", aria-controls="navbarTogglerDemo01", aria-expanded="false", aria-label="Toggle navigation").navbar-toggler
+                    span.navbar-toggler-icon
+                #navbarTogglerDemo01.collapse.navbar-collapse
+                    a(href="/").navbar-brand E-Commerce
+                    ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                        li.nav-item
+                            a(aria-current="page", href="/").nav-link Home
+                        li.nav-item
+                            a(aria-current="page", href="/about").nav-link About
+                        li.nav-item
+                            a(aria-current="page", href="/dashboard").nav-link Dashboard
+                        li.nav-item
+                            a(aria-current="page", href="/sign-up").nav-link Sign Up            
         block content

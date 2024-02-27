@@ -1,7 +1,12 @@
 extends layout
 block content 
-    h1 #{title}
-    ul
-        each user, i in users
-            li= user.username
-            li= user.email
+    h3 #{title}
+    .container-fluid.text-center
+        each product, i in products
+            .card(style="width: 18rem;")
+                img(alt="...").card-img-top
+                .card-body
+                    .card-title #{product.name}
+                    .card-subtitle.mb-2.text-body-secondary  $#{product.price}
+                    .card-text #{product.description}
+                    a(href="#").btn.btn-primary Go to stock

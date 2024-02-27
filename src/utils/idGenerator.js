@@ -1,5 +1,5 @@
 const generateNewId = () => {
-    return Math.floor(Math.random() * 10000);
+    return Date.now();
 }
 
 export default generateNewId;

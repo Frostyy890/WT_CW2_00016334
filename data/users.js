@@ -1,5 +1,7 @@
+import { User } from "../src/models/index.js"
+
 const Users = [
-    {id: 1, username: "someusername", email: "randomemail@gmail.com", password: "randompassword"},
+    new User(7419878409180, "somerandomusername", "randomemail@gmail.com", "randompassword"),
 ]
 
 export default Users
