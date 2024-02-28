@@ -1,5 +1,7 @@
 import Users from "../../../data/users.js";
 import generateNewId from "../../utils/idGenerator.js";
+import { User } from "../../models/index.js";
+
 
 export const SignUp = async (req, res, next) => {
     try {
@@ -9,13 +11,9 @@ export const SignUp = async (req, res, next) => {
             res.status(409).json({message: "User already exists"});
         } else {
             const id = generateNewId();
-            const newUser = {
-                id,
-                username,
-                email,
-                password
-            }
+            const newUser = new User(id, username, email, password);
             Users.push(newUser);
+            console.log(newUser);
             res.status(201).json({message: "User registration complete", newUser})
             console.log("All users:", Users)
         }
