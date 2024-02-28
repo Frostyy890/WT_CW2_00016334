@@ -1,12 +1,18 @@
 extends layout
 block content 
     h3 #{title}
-    .container-fluid.text-center
+    .text-center
+        p.h4 Buy and order the latest cutting edge tech
+        span Click on the item's name to see more details
+    br
+    .container-xxl.text-center.h-auto.grid
         each product, i in products
-            .card(style="width: 18rem;")
+            .card
                 img(alt="...").card-img-top
                 .card-body
-                    .card-title #{product.name}
+                    a(href="/item/"+product.id).card-title.product #{product.name}
                     .card-subtitle.mb-2.text-body-secondary  $#{product.price}
-                    .card-text #{product.description}
-                    a(href="#").btn.btn-primary Go to stock
+                    .card-text.mb-2 #{product.description}
+                    a(href="#").btn.btn-primary Add to cart
+                    
+                    
